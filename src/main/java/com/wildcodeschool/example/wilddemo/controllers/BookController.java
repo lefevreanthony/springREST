@@ -42,7 +42,9 @@ public class BookController {
        
         Book bookToUpdate = bookrepository.findById(id).get();
         bookToUpdate.setTitle(book.getTitle());
+        bookToUpdate.setAuthor(book.getAuthor());
         bookToUpdate.setDescription(book.getDescription());
+        
         return bookrepository.save(bookToUpdate);
     }
 
